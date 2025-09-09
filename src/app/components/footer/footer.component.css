@@ -1,0 +1,110 @@
+/* Estilos generales del footer */
+footer {
+  background: #0A578C;
+  color: white;
+  padding: 40px 10%;
+  text-align: left;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Estilos para las columnas */
+.footer-column {
+  flex: 1;  /* Hace que las columnas ocupen el mismo espacio */
+  min-width: 250px; /* Asegura que las columnas no se hagan demasiado pequeñas */
+  max-width: 33%; /* Asegura que no excedan el 33% del ancho total */
+}
+
+.logo-column {
+  max-width: 33%; /* Asegura que las columnas no se hagan demasiado pequeñas */
+}
+
+.contact-column h3,
+.social-column h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.contact-column p,
+.social-column p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Alineación de las imágenes con el texto */
+.contact-column p {
+  display: flex;
+  align-items: center; /* Alinea las imágenes con el texto */
+  margin-bottom: 20px;
+}
+
+.contact-column p img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-right: 8px; /* Espacio entre la imagen y el texto */
+}
+
+/* Efecto hover en las imágenes */
+.contact-column p:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1); /* Efecto de escala al pasar el cursor */
+  opacity: 0.8;
+}
+
+/* Estilo del logo */
+footer .logo {
+  width: 120px; /* Ajusta el tamaño del logo */
+  margin-bottom: 15px;
+}
+
+/* Estilos de texto de la primera columna */
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-column {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-column h3 {
+    margin-top: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

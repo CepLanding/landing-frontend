@@ -13,24 +13,24 @@
    <!-- CENTRO: Menú -->
     <div class="menu-wrapper">
       <ul class="menu">
-        <li class="menu-item">Inicio</li>
+        <li class="menu-item" (click)="Inicio()">Inicio</li>
         <li class="menu-item dropdown">
           Nosotros
           <ul class="submenu">
-            <li class="submenu-item">Quienes Somos</li>
+            <li class="submenu-item" (click)="QuienesSomos()">Quienes Somos</li>
             <li class="submenu-item">Junta Directiva</li>
-            <li class="submenu-item">Fines y Deberes</li>
+            <li class="submenu-item" (click)="FinesDeberes()">Fines y Deberes</li>
             <li class="submenu-item">Himno a la Enfermera</li>
           </ul>
         </li>
         <li class="menu-item dropdown">
           Trámites y Servicios
           <ul class="submenu">
-            <li class="submenu-item">Colegiatura Electronica</li>
-            <li class="submenu-item">Conoce Tu Enfermera(o)</li>
+            <li class="submenu-item" (click)="Colegiatura()">Colegiatura Electronica</li>
+            <li class="submenu-item" (click)="Enfermera()">Conoce Tu Enfermera(o)</li>
             <li class="submenu-item">Asesoria Legal</li>
             <li class="submenu-item">FAM</li>
-            <li class="submenu-item">Buzón de Sugerencia y Reclamos</li>
+            <li class="submenu-item" (click)="Reclamos()">Buzón de Sugerencia y Reclamos</li>
           </ul>
         </li>
         <li class="menu-item dropdown">Convenios</li>

@@ -1,13 +1,28 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sub-navbar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './sub-navbar.component.html',
   styleUrl: './sub-navbar.component.css'
 })
 export class SubNavbarComponent {
+  isMobileMenuOpen = false;
+  openSubmenu: string | null = null;
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    if (!this.isMobileMenuOpen) {
+      this.openSubmenu = null; // cerrar submenús al cerrar sidebar
+    }
+  }
+
+  toggleSubmenu(name: string) {
+    this.openSubmenu = this.openSubmenu === name ? null : name;
+  }
+
   redirectToPortal() {
     window.open('https://www.cep.org.pe/portaldelcolegiado/', '_blank');  
   }

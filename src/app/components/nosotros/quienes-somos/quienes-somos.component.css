@@ -43,8 +43,8 @@
 }
 
 .card-header img {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
   margin-right: 20px;
   transition: transform 0.3s ease;
 }
@@ -216,22 +216,119 @@
 }
 
 @media (max-width: 1024px) {
-  .valores-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .quienes-somos {
+    padding: 180px 50px 40px;
   }
+
+  .content {
+    gap: 20px;
+  }
+
+  .card-header h2 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .card-header img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .card-body p {
+    font-size: 16px;
+  }
+
+  .valores{
+    padding: 30px 30px 50px;
+  }
+
+  .valores-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .valor-card-content h3 {
+    font-size: 14px;
+  }
+
+  .valor-card-content p {
+    font-size: 12px;
+  }
+
+  .valor-card img {
+    width: 35px;
+    height: 35px;
+  }
+
 }
 
 @media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .card-header h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 12px;
+  }
   .valores-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .card-body p {
+    font-size: 12px;
+  }
+
+  .valores h2{
+    font-size: 28px;
+  }
 
   .valor-card {
+    height: 180px;
     max-width: 100%;
+  }
+
+  .valor-card-content h3 {
+    font-size: 13px;
   }
 }
 
+
 @media (max-width: 480px) {
+  .mision-vision {
+    flex-direction: column;
+    padding: 40px 45px;
+  }
+  .card-mision-vision{
+    width: 100%;
+  }
+  .valores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  .right-column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .mision-vision {
+    flex-direction: column;
+    padding: 40px 45px;
+  }
+  .card-mision-vision{
+    width: 100%;
+  }
   .valores-grid {
     grid-template-columns: 1fr;
   }

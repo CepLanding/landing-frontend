@@ -1,8 +1,5 @@
-body {
-  background-color: #f4f4f4;
-  margin-top: 120px; 
-}
 
-main {
-  padding-top: 20px; 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }

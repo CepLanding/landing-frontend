@@ -21,7 +21,7 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0) 60%);
-  z-index: 1; /* Mantiene el gradiente debajo del texto */
+  z-index: 1;
 }
 
 .banner-text {
@@ -34,7 +34,7 @@
   font-weight: bold;
   padding: 10px 20px;
   border-radius: 5px;
-  z-index: 2; /* Asegura que el texto esté encima del gradiente */
+  z-index: 2;
 }
 
 
@@ -349,11 +349,17 @@
 
 
 @media (max-width: 1024px) {
+  .header {
+    margin-top: 10px;
+  }
+  .cards-section {
+    padding: 60px 10px;
+  }
   .card {
-    width: 45%;
+    width: 300px;
   }
    .convenios-content {
-    flex-direction: column;
+    padding: 0px 10px;
     align-items: flex-start;
   }
 
@@ -364,10 +370,10 @@
 
   .convenios-text {
     text-align: center;
+    padding: 66px 0;
   }
 
   .convenios-logos {
-    flex-direction: column;
     gap: 15px;
     margin-bottom: 20px;
   }
@@ -378,16 +384,184 @@
 }
 
 @media (max-width: 768px) {
+  .banner-text {
+    font-size: 15px;
+  }
   .card {
-    width: 90%;
+    width: 230px;
+  }
+
+  .card-header h3 {
+    font-size: 17px;
+  }
+
+  .card-body {
+    font-size: 13px;
+  }
+
+  
+  .convenios-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Añadir espacio arriba para bajarla un poco */
+    width: 100%;
+  }
+
+  .payment-section{
+    font-size: 20px;
+    padding: 60px 10% 90px;
+  }
+  .convenios-icon-circle {
+    width: 50px;
+    height: 50px;
   }
     .convenios-btn {
     width: 100%;
     padding: 12px 20px;
     font-size: 14px;
   }
-    .payment-cards {
-    flex-direction: column;
+  .payment-cards {
     gap: 20px;
+  }
+  .payment-card{
+    width: 160px;
+    height: 150px;
+  }
+
+  .circle1 {
+    display: none;
+  }
+  .circle2 {
+    top: 177px !important;
+    right: 510px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header{
+    margin-top: 26px;
+    height: 382px;
+  }
+  .header-img {
+    height: 370px;
+  }
+  .banner-text {
+    bottom: 30px;
+    font-size: 13px;
+  }
+
+  .cards-section {
+    padding: 30px 10px;
+  }
+  .card {
+    width: 180px;
+  }
+
+  .card-header h3 {
+    font-size: 15px;
+  }
+
+  .card-body {
+    font-size: 11px;
+  }
+  .convenios-section {
+    padding: 0px 5%;
+  }
+  .convenios-img-container {
+    display: none;
+  }
+
+  .payment-section{
+    font-size: 20px;
+    padding: 60px 10% 90px;
+  }
+  .convenios-icon-circle {
+    width: 50px;
+    height: 50px;
+  }
+    .convenios-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  .payment-cards {
+    gap: 20px;
+  }
+  .payment-card{
+    width: 160px;
+    height: 150px;
+  }
+
+  .circle1 {
+    display: none;
+  }
+  .circle2 {
+    top: 177px !important;
+    right: 510px;
+  }
+}
+
+@media (max-width: 430px) {
+  .header{
+    margin-top: 26px;
+    height: 382px;
+  }
+  .header-img {
+    height: 370px;
+  }
+  .banner-text {
+    bottom: 30px;
+    font-size: 13px;
+  }
+
+  .cards-section {
+    padding: 30px 10px;
+  }
+  .card {
+    width: 180px;
+  }
+
+  .card-header h3 {
+    font-size: 15px;
+  }
+
+  .card-body {
+    font-size: 11px;
+  }
+  .convenios-section {
+    padding: 0px 5%;
+  }
+  .convenios-img-container {
+    display: none;
+  }
+
+  .payment-section{
+    font-size: 20px;
+    padding: 60px 10% 90px;
+  }
+  .convenios-icon-circle {
+    width: 50px;
+    height: 50px;
+  }
+    .convenios-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  .payment-cards {
+    gap: 20px;
+  }
+  .payment-card{
+    width: 160px;
+    height: 150px;
+  }
+
+  .circle1 {
+    display: none;
+  }
+  .circle2 {
+    top: 177px !important;
+    right: 510px;
   }
 }

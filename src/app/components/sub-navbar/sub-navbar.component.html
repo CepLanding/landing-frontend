@@ -1,7 +1,6 @@
 <div class="subnavbar">
   <div class="subnavbar-content">
-    
-    <!-- IZQUIERDA: Logo + texto al lado -->
+    <!-- IZQUIERDA: Logo -->
     <div class="logo-container">
       <img src="/assets/img/logo.png" alt="Logo" class="logo" />
       <span class="logo-text">
@@ -9,9 +8,8 @@
       </span>
     </div>
 
-    <!-- CENTRO: Menú -->
-   <!-- CENTRO: Menú -->
-    <div class="menu-wrapper">
+    <!-- MENÚ PRINCIPAL (Desktop) -->
+    <div class="menu-wrapper menu-escritorio">
       <ul class="menu">
         <li class="menu-item" (click)="Inicio()">Inicio</li>
         <li class="menu-item dropdown">
@@ -45,8 +43,60 @@
       </ul>
     </div>
 
+    <!-- BOTÓN PORTAL (SOLO Desktop) -->
+    <button class="portal-button menu-escritorio" (click)="redirectToPortal()">Portal Colegiatura</button>
 
-    <!-- DERECHA: Botón -->
-    <button class="portal-button" (click)="redirectToPortal()">Portal Colegiatura</button>
+    <!-- BOTÓN HAMBURGUESA (Móvil) -->
+    <div class="hamburger mobile-menu" (click)="toggleMobileMenu()">
+      ☰
+    </div>
   </div>
+
+  <!-- SIDEBAR MÓVIL -->
+<div class="menu-lateral" [class.abierto]="isMobileMenuOpen">
+    <div class="encabezado-menu">
+      <span class="btn-cerrar" (click)="toggleMobileMenu()">✖</span>
+    </div>
+
+    <ul class="lista-menu">
+      <li class="item-menu" (click)="Inicio()">Inicio</li>
+
+      <li class="item-menu" (click)="toggleSubmenu('nosotros')">
+        Nosotros <span class="flecha">{{ openSubmenu === 'nosotros' ? '▼' : '▶' }}</span>
+        <ul class="submenu" *ngIf="openSubmenu === 'nosotros'">
+          <li class="item-submenu" (click)="QuienesSomos()">Quienes Somos</li>
+          <li class="item-submenu">Junta Directiva</li>
+          <li class="item-submenu" (click)="FinesDeberes()">Fines y Deberes</li>
+          <li class="item-submenu">Himno a la Enfermera</li>
+        </ul>
+      </li>
+
+      <li class="item-menu" (click)="toggleSubmenu('tramites')">
+        Trámites y Servicios <span class="flecha">{{ openSubmenu === 'tramites' ? '▼' : '▶' }}</span>
+        <ul class="submenu" *ngIf="openSubmenu === 'tramites'">
+          <li class="item-submenu" (click)="Colegiatura()">Colegiatura Electronica</li>
+          <li class="item-submenu" (click)="Enfermera()">Conoce Tu Enfermera(o)</li>
+          <li class="item-submenu">Asesoria Legal</li>
+          <li class="item-submenu">FAM</li>
+          <li class="item-submenu" (click)="Reclamos()">Buzón de Sugerencia y Reclamos</li>
+        </ul>
+      </li>
+
+      <li class="item-menu" (click)="Convenios()">Convenios</li>
+      <li class="item-menu">Reconocimientos</li>
+
+      <li class="item-menu" (click)="toggleSubmenu('documentos')">
+        Documentos <span class="flecha">{{ openSubmenu === 'documentos' ? '▼' : '▶' }}</span>
+        <ul class="submenu" *ngIf="openSubmenu === 'documentos'">
+          <li class="item-submenu">Estatuto y Reglamento</li>
+          <li class="item-submenu">Uso Correcto del Uniforme</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- BOTÓN PORTAL DENTRO DEL SIDEBAR -->
+    <button class="btn-portal" (click)="redirectToPortal()">Portal Colegiatura</button>
+</div>
+
+
 </div>

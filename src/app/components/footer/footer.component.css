@@ -1,9 +1,9 @@
-/* Estilos generales del footer */
 footer {
   background: #0A578C;
   color: white;
   padding: 40px 10%;
   text-align: left;
+  min-height: 300px;
 }
 
 .footer-container {
@@ -11,17 +11,17 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
+  flex-grow: 1;
 }
 
-/* Estilos para las columnas */
 .footer-column {
-  flex: 1;  /* Hace que las columnas ocupen el mismo espacio */
-  min-width: 250px; /* Asegura que las columnas no se hagan demasiado pequeñas */
-  max-width: 33%; /* Asegura que no excedan el 33% del ancho total */
+  flex: 1;
+  min-width: 250px;
+  max-width: 33%;
 }
 
 .logo-column {
-  max-width: 33%; /* Asegura que las columnas no se hagan demasiado pequeñas */
+  max-width: 33%;
 }
 
 .contact-column h3,
@@ -38,10 +38,9 @@ footer {
   line-height: 1.6;
 }
 
-/* Alineación de las imágenes con el texto */
 .contact-column p {
   display: flex;
-  align-items: center; /* Alinea las imágenes con el texto */
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -49,10 +48,9 @@ footer {
   width: 20px;
   height: 20px;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  margin-right: 8px; /* Espacio entre la imagen y el texto */
+  margin-right: 8px;
 }
 
-/* Efecto hover en las imágenes */
 .contact-column p:hover img {
   transform: scale(1.1);
   opacity: 0.8;
@@ -71,39 +69,65 @@ footer {
 }
 
 .social-icons a:hover img {
-  transform: scale(1.1); /* Efecto de escala al pasar el cursor */
+  transform: scale(1.1);
   opacity: 0.8;
 }
 
-/* Estilo del logo */
 footer .logo {
-  width: 120px; /* Ajusta el tamaño del logo */
+  width: 120px;
   margin-bottom: 15px;
 }
 
-/* Estilos de texto de la primera columna */
 .footer-column p {
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  footer {
+    padding: 30px;
+  }
+
   .footer-container {
-    flex-direction: column;
-    align-items: center;
+    gap: 90px;
   }
   
   .footer-column {
-    text-align: center;
     margin-bottom: 20px;
+  }
+
+  footer {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 30px;
+  }
+
+  .footer-container {
+    gap: 10px; /* Espacio entre las columnas */
+  }
+
+  .footer-column {
+    width: 100%; /* Asegura que las columnas ocupen todo el ancho */
+  }
+
+  .social-column {
+    display: none;
+  }
+
+  .logo {
+    width: 100px;
+    margin-bottom: 15px;
   }
 
   .footer-column h3 {
     margin-top: 20px;
   }
-
+  
   .social-icons {
     justify-content: center;
   }

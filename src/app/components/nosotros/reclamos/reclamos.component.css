@@ -56,9 +56,8 @@
   right: 80px;
 }
 
-/* === CONTENEDOR PRINCIPAL DE RECLAMACIÓN === */
 .reclamacion-container {
-  position: relative; /* Para que quede por encima de los círculos */
+  position: relative; 
   z-index: 1;
   display: flex;
   align-items: center;
@@ -72,7 +71,6 @@
   flex-wrap: wrap;
 }
 
-/* === IMAGEN === */
 .reclamacion-img {
   flex: 1;
   max-width: 400px;
@@ -87,7 +85,6 @@
   border-radius: 12px;
 }
 
-/* === TEXTO === */
 .reclamacion-texto {
   flex: 1;
   max-width: 500px;
@@ -108,7 +105,6 @@
   margin-bottom: 40px;
 }
 
-/* === BOTÓN === */
 .btn-reclamo {
   background-color: #0CA9D5;
   color: #fff;
@@ -135,11 +131,45 @@
   height: 20px;
   filter: brightness(0) invert(1);
 }
+@media (max-width: 1024px) {
+  .reclamacion-container {
+    max-width: 800px;
+  }
 
-/* === RESPONSIVE === */
+  .reclamacion-virtual {
+    padding: 180px 20px 40px;
+  }
+
+  .circle1 {
+    width: 120px;
+    height: 120px;
+    left: 59px;
+  }
+
+  .circle2 {
+    width: 150px;
+    height: 150px;
+    bottom: -18px;
+  }
+
+  .circle3 {
+    width: 170px;
+    height: 170px;
+    background-color: rgba(61, 60, 155, 0.1);
+    top: 100px;
+    left: 580px;
+  }
+
+  .circle4 {
+    width: 220px;
+    height: 220px;
+    top: 317px;
+    right: 29px;
+  }
+}
+
 @media (max-width: 768px) {
   .reclamacion-container {
-    flex-direction: column;
     padding: 40px 20px;
   }
 
@@ -149,6 +179,29 @@
 
   .btn-reclamo {
     justify-content: center;
-    width: 100%;
+    width: 87%;
+    font-size: 13px;
+  }
+
+  .reclamacion-img img{
+    max-width: 76%;
+  }
+
+  .reclamacion-texto h2 {
+    font-size: 25px;
+  }
+
+  .reclamacion-texto p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .reclamacion-img {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .reclamacion-img {
+    display: none;
   }
 }

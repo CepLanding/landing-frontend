@@ -145,7 +145,7 @@
   outline: none;
 }
 
-@media (max-width: 1512px) {
+@media (max-width: 1536px) {
   .subnavbar {
     padding: 10px 40px;
   }

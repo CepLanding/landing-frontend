@@ -215,7 +215,7 @@
   justify-content: flex-start;
 }
 
-@media (max-width: 1512px) {
+@media (max-width: 1536px) {
   .valor-card {
     height: 305px;
   }

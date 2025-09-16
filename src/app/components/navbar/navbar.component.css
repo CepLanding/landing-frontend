@@ -48,6 +48,12 @@
   }
 }
 
+@media (max-width: 1512px) {
+  .contact-icons {
+    padding: 0 360px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     height: auto;

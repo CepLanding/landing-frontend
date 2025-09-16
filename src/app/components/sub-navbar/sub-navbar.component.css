@@ -145,6 +145,12 @@
   outline: none;
 }
 
+@media (max-width: 1512px) {
+  .subnavbar {
+    padding: 10px 40px;
+  }
+}
+
 @media (max-width: 1024px) {
   .logo {
     width: 60px;

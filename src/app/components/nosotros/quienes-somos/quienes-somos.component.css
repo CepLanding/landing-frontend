@@ -215,6 +215,12 @@
   justify-content: flex-start;
 }
 
+@media (max-width: 1512px) {
+  .valor-card {
+    height: 305px;
+  }
+}
+
 @media (max-width: 1024px) {
   .quienes-somos {
     padding: 180px 50px 40px;

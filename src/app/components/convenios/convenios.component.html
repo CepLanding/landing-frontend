@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<section class="convenios-container">
+  <div class="sidebar">
+    <ul>
+      <!-- Menú lateral con las áreas -->
+      <li *ngFor="let area of areasConvenios" 
+          (click)="seleccionarArea(area)" 
+          [class.active]="area === areaSeleccionada">
+        {{ area.nombre }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div *ngIf="areaSeleccionada">
+      <h2>{{ areaSeleccionada.nombre }}</h2>
+      <div class="logos-grid">
+        <div *ngFor="let convenio of areaSeleccionada.convenios" 
+             class="logo-wrapper" 
+             (click)="abrirModal(convenio)" 
+             title="{{ convenio.nombre }}">
+          <img [src]="convenio.logoUrl" [alt]="convenio.nombre" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" *ngIf="convenioSeleccionado">
+    <div class="modal-content">
+      <span class="close" (click)="cerrarModal()">&times;</span>
+      <h3>{{ convenioSeleccionado.nombre }}</h3>
+      <p>{{ convenioSeleccionado.descripcion }}</p>
+      <div class="modal-buttons">
+        <a [href]="convenioSeleccionado.enlaceEmpresa" target="_blank" class="btn">Visitar Página</a>
+        <a [href]="convenioSeleccionado.enlaceDrive" target="_blank" class="btn secondary">Ver más info</a>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

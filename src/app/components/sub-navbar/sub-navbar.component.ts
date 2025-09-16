@@ -30,4 +30,7 @@ export class SubNavbarComponent {
   Reclamos() {
     window.location.href = '/buzón-de-sugerencias-y-reclamos'; 
   }
+  Convenios() {
+    window.location.href = '/convenios'; 
+  }
 }

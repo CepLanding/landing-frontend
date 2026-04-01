@@ -1,5 +1,5 @@
 footer {
-  background: #0A578C;
+  background: #7BB4E3;
   color: white;
   padding: 40px 10%;
   text-align: left;
@@ -58,7 +58,7 @@ footer {
 
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 25px;
   margin-top: 10px;
 }
 

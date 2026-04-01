@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+
+<section class="courses">
+  <div class="flyers-grid">
+    <div class="flyer-card" (click)="openImage('/assets/img/cursos/curso_ejes_clave.jpeg')">
+      <img src="/assets/img/cursos/curso_ejes_clave.jpeg" alt="Curso 1" class="flyer">
+    </div>
+
+    <div class="flyer-card" (click)="openImage('/assets/img/cursos/cursos_anemia_infantil.jpeg')">
+      <img src="/assets/img/cursos/cursos_anemia_infantil.jpeg" alt="Curso 2" class="flyer">
+    </div>
+
+    <div class="flyer-card" (click)="openImage('/assets/img/cursos/diplomado_servicios_enfermeria.jpeg')">
+      <img src="/assets/img/cursos/diplomado_servicios_enfermeria.jpeg" alt="Curso 3" class="flyer">
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="image-modal" *ngIf="selectedImage" (click)="closeImage()">
+  <span class="close" (click)="closeImage()">×</span>
+  <img class="modal-img" [src]="selectedImage" (click)="$event.stopPropagation()">
+</div>
+
+<app-footer></app-footer>

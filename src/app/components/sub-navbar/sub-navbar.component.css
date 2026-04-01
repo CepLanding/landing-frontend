@@ -32,7 +32,7 @@
 .logo-text {
   font-size: 23px;
   font-weight: bold;
-  color: #0A578C;
+  color: #7BB4E3;
   white-space: normal;
   line-height: 1.2;
 }
@@ -89,7 +89,7 @@
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
-  background-color: #0c5485;
+  background-color: #7BB4E3;
   list-style-type: none;
   padding: 10px 0;
   margin: 0;
@@ -121,7 +121,7 @@
 }
 
 .submenu-item:hover {
-  background-color: #003d73;
+  background-color: #7BB4E3;
 }
 
 .portal-button {
@@ -258,7 +258,7 @@
   background: #f9f9f9;
   margin-top: 5px;
   margin-left: 10px;
-  border-left: 2px solid #0A578C;
+  border-left: 2px solid #7BB4E3;
   padding-left: 10px;
   display: flex;
   flex-direction: column;

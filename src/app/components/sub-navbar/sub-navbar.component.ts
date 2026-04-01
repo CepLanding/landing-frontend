@@ -48,4 +48,13 @@ export class SubNavbarComponent {
   Convenios() {
     window.location.href = '/convenios'; 
   }
+  Cursos() {
+    window.location.href = '/cursos'; 
+  }
+  Himno() {
+    window.location.href = '/himno'; 
+  }
+  Asesoria() {
+    window.location.href = '/asesoria-legal'; 
+  }
 }

@@ -18,7 +18,7 @@
             <li class="submenu-item" (click)="QuienesSomos()">Quienes Somos</li>
             <li class="submenu-item">Junta Directiva</li>
             <li class="submenu-item" (click)="FinesDeberes()">Fines y Deberes</li>
-            <li class="submenu-item">Himno a la Enfermera</li>
+            <li class="submenu-item" (click)="Himno()">Himno a la Enfermera</li>
           </ul>
         </li>
         <li class="menu-item dropdown">
@@ -26,12 +26,13 @@
           <ul class="submenu">
             <li class="submenu-item" (click)="Colegiatura()">Colegiatura Electronica</li>
             <li class="submenu-item" (click)="Enfermera()">Conoce Tu Enfermera(o)</li>
-            <li class="submenu-item">Asesoria Legal</li>
+            <li class="submenu-item" (click)="Asesoria()">Asesoria Legal</li>
             <li class="submenu-item">FAM</li>
             <li class="submenu-item" (click)="Reclamos()">Buzón de Sugerencia y Reclamos</li>
           </ul>
         </li>
         <li class="menu-item dropdown" (click)="Convenios()">Convenios</li>
+        <li class="menu-item dropdown" (click)="Cursos()">Cursos</li>
         <li class="menu-item dropdown">Reconocimientos</li>
         <li class="menu-item dropdown">
           Documentos
@@ -76,7 +77,7 @@
         <ul class="submenu" *ngIf="openSubmenu === 'tramites'">
           <li class="item-submenu" (click)="Colegiatura()">Colegiatura Electronica</li>
           <li class="item-submenu" (click)="Enfermera()">Conoce Tu Enfermera(o)</li>
-          <li class="item-submenu">Asesoria Legal</li>
+          <li class="item-submenu" (click)="Asesoria()">Asesoria Legal</li>
           <li class="item-submenu">FAM</li>
           <li class="item-submenu" (click)="Reclamos()">Buzón de Sugerencia y Reclamos</li>
         </ul>
@@ -84,6 +85,7 @@
 
       <li class="item-menu" (click)="Convenios()">Convenios</li>
       <li class="item-menu">Reconocimientos</li>
+      <li class="item-menu">Cursos</li>
 
       <li class="item-menu" (click)="toggleSubmenu('documentos')">
         Documentos <span class="flecha">{{ openSubmenu === 'documentos' ? '▼' : '▶' }}</span>

@@ -1,0 +1,162 @@
+/* SECCIÓN GENERAL */
+.himno-section {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(180deg, #f5fbff 0%, #ffffff 100%);
+  font-family: 'Inter', sans-serif;
+}
+
+/* HERO */
+.hero {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1f3c88;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CONTENIDO */
+.content {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* ========================= */
+/* VIDEO + TABS (NUEVO) */
+/* ========================= */
+
+.video-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.tabs-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tabs-vertical button {
+  background: #f1f5f9;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #444;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  text-align: left;
+}
+
+.tabs-vertical button:hover {
+  background: #e3f2fd;
+}
+
+.tabs-vertical button.active {
+  background: #2f80ed;
+  color: #fff;
+}
+
+.video-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 0 16px 16px 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+.lyrics-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.lyrics-card h3 {
+  font-size: 1.4rem;
+  color: #1f3c88;
+  margin-bottom: 1rem;
+}
+
+.lyrics {
+  overflow-y: auto;
+  max-height: 320px;
+  padding-right: 0.5rem;
+}
+
+.lyrics p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 0.8rem;
+}
+
+/* SCROLL */
+.lyrics::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lyrics::-webkit-scrollbar-thumb {
+  background-color: #cfd8dc;
+  border-radius: 10px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .video-wrapper {
+    flex-direction: column;
+  }
+
+  .tabs-vertical {
+    flex-direction: row;
+  }
+
+  .tabs-vertical button {
+    border-radius: 10px;
+    min-width: auto;
+    flex: 1;
+    text-align: center;
+  }
+
+  .video-card {
+    border-radius: 16px;
+  }
+
+  .hero h2 {
+    font-size: 1.9rem;
+  }
+}

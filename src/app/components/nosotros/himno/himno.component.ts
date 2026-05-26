@@ -12,12 +12,14 @@ import { CommonModule } from '@angular/common';
 })
 export class HimnoComponent {
 
-  // 👉 CONTROL DE PESTAÑAS
+  formatVerso(verso: string): string {
+  return verso.replace(/enfermera/gi, '<strong>Enfermera</strong>');
+}
+
   selectedTab: string = 'enfermera';
 
   showLyrics = false;
 
-  // 👉 HIMNO DE LA ENFERMERA
   himno = [
     [
       'Enfermera, elevada conciencia',

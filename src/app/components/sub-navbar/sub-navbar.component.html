@@ -16,7 +16,7 @@
           Nosotros
           <ul class="submenu">
             <li class="submenu-item" (click)="QuienesSomos()">Quienes Somos</li>
-            <li class="submenu-item">Junta Directiva</li>
+            <li class="submenu-item" (click)="JuntaDirectiva()">Junta Directiva</li>
             <li class="submenu-item" (click)="FinesDeberes()">Fines y Deberes</li>
             <li class="submenu-item" (click)="Himno()">Himno a la Enfermera</li>
           </ul>
@@ -27,25 +27,49 @@
             <li class="submenu-item" (click)="Colegiatura()">Colegiatura Electronica</li>
             <li class="submenu-item" (click)="Enfermera()">Conoce Tu Enfermera(o)</li>
             <li class="submenu-item" (click)="Asesoria()">Asesoria Legal</li>
-            <li class="submenu-item">FAM</li>
+            <li class="submenu-item" (click)="Fam()">FAM</li>
             <li class="submenu-item" (click)="Reclamos()">Buzón de Sugerencia y Reclamos</li>
           </ul>
         </li>
         <li class="menu-item dropdown" (click)="Convenios()">Convenios</li>
         <li class="menu-item dropdown" (click)="Cursos()">Cursos</li>
-        <li class="menu-item dropdown">Reconocimientos</li>
-        <li class="menu-item dropdown">
+        <!-- <li class="menu-item dropdown">Reconocimientos</li> -->
+        <li class="menu-item dropdown" (click)="Documentos()">
           Documentos
-          <ul class="submenu">
+          <!-- <ul class="submenu">
             <li class="submenu-item">Estatuto y Reglamento</li>
             <li class="submenu-item">Uso Correcto del Uniforme</li>
-          </ul>
+          </ul> -->
         </li>
       </ul>
     </div>
 
     <!-- BOTÓN PORTAL (SOLO Desktop) -->
     <button class="portal-button menu-escritorio" (click)="redirectToPortal()">Portal Colegiatura</button>
+
+    <div class="hamburger-desktop menu-escritorio" (click)="toggleMenu()">
+      ☰
+    </div>
+
+    <!-- 🔥 SIDEBAR DERECHA -->
+    <div class="reconocimientos-panel" [class.abierto]="showMenu">
+
+      <div class="panel-header">
+        <span>Menú</span>
+        <span class="cerrar" (click)="toggleMenu()">✖</span>
+      </div>
+
+      <ul>
+        <li>Reconocimientos</li>
+      </ul>
+
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="overlay" 
+        *ngIf="showMenu" 
+        (click)="toggleMenu()">
+    </div>
 
     <!-- BOTÓN HAMBURGUESA (Móvil) -->
     <div class="hamburger mobile-menu" (click)="toggleMobileMenu()">
@@ -66,9 +90,9 @@
         Nosotros <span class="flecha">{{ openSubmenu === 'nosotros' ? '▼' : '▶' }}</span>
         <ul class="submenu" *ngIf="openSubmenu === 'nosotros'">
           <li class="item-submenu" (click)="QuienesSomos()">Quienes Somos</li>
-          <li class="item-submenu">Junta Directiva</li>
+          <li class="item-submenu" (click)="JuntaDirectiva()">Junta Directiva</li>
           <li class="item-submenu" (click)="FinesDeberes()">Fines y Deberes</li>
-          <li class="item-submenu">Himno a la Enfermera</li>
+          <li class="item-submenu" (click)="Himno()">Himno a la Enfermera</li>
         </ul>
       </li>
 
@@ -78,21 +102,21 @@
           <li class="item-submenu" (click)="Colegiatura()">Colegiatura Electronica</li>
           <li class="item-submenu" (click)="Enfermera()">Conoce Tu Enfermera(o)</li>
           <li class="item-submenu" (click)="Asesoria()">Asesoria Legal</li>
-          <li class="item-submenu">FAM</li>
+          <li class="item-submenu" (click)="Fam()">FAM</li>
           <li class="item-submenu" (click)="Reclamos()">Buzón de Sugerencia y Reclamos</li>
         </ul>
       </li>
 
       <li class="item-menu" (click)="Convenios()">Convenios</li>
       <li class="item-menu">Reconocimientos</li>
-      <li class="item-menu">Cursos</li>
+      <li class="item-menu" (click)="Cursos()">Cursos</li>
 
       <li class="item-menu" (click)="toggleSubmenu('documentos')">
         Documentos <span class="flecha">{{ openSubmenu === 'documentos' ? '▼' : '▶' }}</span>
-        <ul class="submenu" *ngIf="openSubmenu === 'documentos'">
+        <!-- <ul class="submenu" *ngIf="openSubmenu === 'documentos'">
           <li class="item-submenu">Estatuto y Reglamento</li>
           <li class="item-submenu">Uso Correcto del Uniforme</li>
-        </ul>
+        </ul> -->
       </li>
     </ul>
 

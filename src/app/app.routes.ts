@@ -7,6 +7,8 @@ import { ConveniosComponent } from './components/convenios/convenios.component';
 import { HimnoComponent } from './components/nosotros/himno/himno.component';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { AsesoriaComponent } from './components/tramites-servicios/asesoria/asesoria.component';
+import { FamComponent } from './components/tramites-servicios/fam/fam.component';
+import { JuntaDirectivaComponent } from './components/nosotros/junta-directiva/junta-directiva.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -17,5 +19,7 @@ export const routes: Routes = [
     { path: 'cursos', component: CursosComponent },
     { path: 'himno', component: HimnoComponent },
     { path: 'asesoria-legal', component: AsesoriaComponent },
+    { path: 'fam', component: FamComponent },
+    { path: 'junta-directiva', component: JuntaDirectivaComponent },
 
 ];

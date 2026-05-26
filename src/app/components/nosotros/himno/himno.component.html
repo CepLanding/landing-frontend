@@ -60,9 +60,7 @@
 
     <div class="lyrics">
       <div class="stanza" *ngFor="let estrofa of himno">
-        <p *ngFor="let verso of estrofa">
-          {{ verso }}
-        </p>
+        <p *ngFor="let verso of estrofa" [innerHTML]="formatVerso(verso)"></p>
       </div>
     </div>
   </div>

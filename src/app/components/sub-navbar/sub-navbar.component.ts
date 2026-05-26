@@ -11,6 +11,11 @@ import { Component } from '@angular/core';
 export class SubNavbarComponent {
   isMobileMenuOpen = false;
   openSubmenu: string | null = null;
+  showMenu = false;
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
@@ -56,5 +61,14 @@ export class SubNavbarComponent {
   }
   Asesoria() {
     window.location.href = '/asesoria-legal'; 
+  }
+  Documentos() {
+    window.open('https://www.cep.org.pe/documentos-normativos/', '_blank');  
+  }
+  Fam() {
+    window.location.href = '/fam'; 
+  }
+  JuntaDirectiva() {
+    window.location.href = '/junta-directiva'; 
   }
 }

@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<section class="junta-directiva">
+  <div class="miembro" *ngFor="let m of miembros; let i = index" 
+       [class.reverse]="i % 2 !== 0">
+
+   <div class="texto">
+        <h3>{{ m.nombre }}</h3>
+        <h4 class="cargo">{{ m.cargo }}</h4>
+        <p>{{ m.descripcion }}</p>
+    </div>
+
+    <div class="imagen">
+      <img [src]="m.img" [alt]="m.nombre">
+    </div>
+
+  </div>
+
+</section>
+
+<app-footer></app-footer>

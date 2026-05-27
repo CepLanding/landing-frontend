@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<section class="himno-section">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h2>Himno de la Enfermera</h2>
+    <p>
+      Un canto que representa la vocación, el servicio y la humanidad
+      de quienes cuidan la vida.
+    </p>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="content">
+
+  <!-- BLOQUE VIDEO + TABS -->
+  <div class="video-wrapper">
+
+    <!-- TABS VERTICALES -->
+    <div class="tabs-vertical">
+      <button (click)="selectedTab = 'enfermera'" [class.active]="selectedTab === 'enfermera'">
+        Himno enfermera
+      </button>
+
+      <button (click)="selectedTab = 'cep'" [class.active]="selectedTab === 'cep'">
+        Historia CEP
+      </button>
+
+      <button (click)="selectedTab = 'nacional'" [class.active]="selectedTab === 'nacional'">
+        Himno nacional
+      </button>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="video-card">
+      <iframe
+        *ngIf="selectedTab === 'enfermera'"
+        src="https://www.youtube.com/embed/-OMRXvI2Rdg"
+        allowfullscreen>
+      </iframe>
+
+      <iframe
+        *ngIf="selectedTab === 'cep'"
+        src="https://www.youtube.com/embed/V8cnQAYumxk"
+        allowfullscreen>
+      </iframe>
+
+      <iframe
+        *ngIf="selectedTab === 'nacional'"
+        src="https://www.youtube.com/embed/DDY1dt81gfg"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+
+  <!-- LETRA -->
+  <div class="lyrics-card" *ngIf="selectedTab === 'enfermera'">
+    <h3>Letra del Himno</h3>
+
+    <div class="lyrics">
+      <div class="stanza" *ngFor="let estrofa of himno">
+        <p *ngFor="let verso of estrofa" [innerHTML]="formatVerso(verso)"></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<app-footer></app-footer>

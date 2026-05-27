@@ -1,0 +1,274 @@
+.courses {
+  padding: 160px 70px 70px;
+  background: linear-gradient(to bottom, #f7f9fc, #eef3f8);
+  min-height: 100vh;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.courses-container {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  width: 260px;
+  position: sticky;
+  top: 130px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+
+  border-radius: 24px;
+  padding: 28px 24px;
+
+  border: 1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06),
+    0 4px 12px rgba(0,0,0,0.03);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 14px 18px;
+  margin-bottom: 12px;
+
+  border-radius: 14px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #4d5b6a;
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.sidebar li:hover {
+  background: rgba(10, 87, 140, 0.08);
+  color: #0a578c;
+  transform: translateX(5px);
+}
+
+.sidebar li.active {
+  background: linear-gradient(135deg, #0a578c, #1282c2);
+  color: white;
+  font-weight: 600;
+
+  box-shadow: 0 10px 25px rgba(10,87,140,0.25);
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+  flex: 1;
+}
+
+/* Máximo 3 imágenes por fila */
+.flyers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* =========================
+   CARD
+========================= */
+.flyer-card {
+  position: relative;
+
+  overflow: hidden;
+  border-radius: 24px;
+
+  background: white;
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.08),
+    0 5px 15px rgba(0,0,0,0.04);
+
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+.flyer-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.25),
+    transparent 45%
+  );
+
+  opacity: 0;
+  transition: opacity .4s ease;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.flyer-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 50px rgba(10,87,140,0.18),
+    0 10px 25px rgba(0,0,0,0.08);
+}
+
+.flyer-card:hover::before {
+  opacity: 1;
+}
+
+/* Imagen adaptada a tamaño original */
+.flyer-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+
+  transition: transform .7s ease;
+}
+
+.flyer-card:hover img {
+  transform: scale(1.03);
+}
+
+.flyer {
+  cursor: zoom-in;
+}
+
+/* =========================
+   MODAL
+========================= */
+.image-modal {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(8, 15, 25, 0.92);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+
+  animation: fadeIn .3s ease;
+}
+
+.modal-img {
+  max-width: 88%;
+  max-height: 88%;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,0.6);
+
+  animation: zoomIn .35s ease;
+}
+
+.image-modal .close {
+  position: absolute;
+  top: 28px;
+  right: 38px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.12);
+
+  font-size: 34px;
+  color: white;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.image-modal .close:hover {
+  transform: scale(1.1) rotate(90deg);
+  background: rgba(255,255,255,0.2);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes zoomIn {
+  from {
+    transform: scale(.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1200px) {
+  .flyers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+
+  .courses {
+    padding: 140px 24px 50px;
+  }
+
+  .courses-container {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+  }
+
+  .flyers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-img {
+    max-width: 94%;
+    max-height: 82%;
+  }
+}

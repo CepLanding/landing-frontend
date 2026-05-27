@@ -9,3 +9,7 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+section {
+  padding: 180px 180px 40px;
+}

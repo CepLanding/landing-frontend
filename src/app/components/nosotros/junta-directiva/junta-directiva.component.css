@@ -1,0 +1,123 @@
+.junta-directiva {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.miembro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.miembro.reverse {
+  flex-direction: row-reverse;
+}
+
+.texto {
+  flex: 1;
+  padding: 0 60px;
+  text-align: right;
+}
+
+/* Cuando está invertido */
+.miembro.reverse .texto {
+  text-align: left;
+}
+
+/* TITULO */
+.texto h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* CARGO */
+.cargo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7a8a99;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* DESCRIPCIÓN */
+.texto p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* IMAGEN */
+.imagen {
+  flex: 0 0 auto;
+  display: flex;
+}
+
+.imagen img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 1024px) {
+  .texto {
+    padding: 0 30px;
+  }
+
+  .imagen img {
+    width: 260px;
+  }
+
+  .texto h3 {
+    font-size: 22px;
+  }
+
+  .texto p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .miembro,
+  .miembro.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto {
+    padding: 0;
+  }
+
+  .imagen {
+    justify-content: center;
+  }
+
+  .imagen img {
+    width: 70%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .junta-directiva {
+    gap: 40px;
+  }
+
+  .texto h3 {
+    font-size: 18px;
+  }
+
+  .texto p {
+    font-size: 14px;
+  }
+
+  .imagen img {
+    width: 90%;
+  }
+}

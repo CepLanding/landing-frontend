@@ -42,7 +42,7 @@ export class SubNavbarComponent {
     window.location.href = '/fines-y-deberes'; 
   }
   Colegiatura(){
-    window.open('https://www.cep.org.pe/colelectonica/', '_blank');  
+    window.open('https://www.cep.org.pe/nuevoscolegiados/', '_blank');  
   }
   Enfermera(){
     window.open('https://www.cep.org.pe/validar/', '_blank');  
